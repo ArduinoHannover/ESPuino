@@ -1,0 +1,38 @@
+########################################
+# Syntax Coloring Map For ATtinyExtender
+########################################
+
+########################################
+# Datatypes (KEYWORD1)
+########################################
+
+ATtinyExtender	KEYWORD1
+
+########################################
+# Methods and Functions (KEYWORD2)
+########################################
+
+begin	KEYWORD2
+
+########################################
+# Instances (KEYWORD2)
+########################################
+
+Tiny	KEYWORD2
+
+########################################
+# Constants (LITERAL1)
+########################################
+
+TINY24_ADDR	LITERAL1
+A1	LITERAL1
+A2	LITERAL1
+A3	LITERAL1
+A4	LITERAL1
+A5	LITERAL1
+TA1	LITERAL1
+TA2	LITERAL1
+TA3	LITERAL1
+TA4	LITERAL1
+TA5	LITERAL1
+LED_BUILTIN	LITERAL1
