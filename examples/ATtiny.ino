@@ -75,7 +75,7 @@ void receiveEvent(uint8_t bytesReceived) {
   reg = TinyWireS.receive();
   uint8_t val;
   bytesReceived--;
-  uint8_t value; //will be zero [off/input] if missing the value param in transmission
+  uint8_t value; //will be zero [off/input/VCCRef] if missing the value param in transmission
   if (bytesReceived) {
     value = TinyWireS.receive(); //will discard second param if sent and not needed (read action)
     bytesReceived--;
@@ -90,6 +90,8 @@ void receiveEvent(uint8_t bytesReceived) {
     aVal = analogRead(arpins[reg-24]);fBit=true;return;
   } else if (reg < 32) {
      analogWrite(awpins[reg-29], value);return;
+  } else if (reg == 32) {
+    analogReference(value);
   }
   while (bytesReceived) {
     TinyWireS.receive(); //discard
