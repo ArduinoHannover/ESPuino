@@ -42,9 +42,9 @@ void setup(void){
   
   WiFi.softAP(ssid, password);
 
-	IPAddress myIP = WiFi.softAPIP();
-	Serial.print("AP IP address: ");
-	Serial.println(myIP);
+  IPAddress myIP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(myIP);
   
   if (mdns.begin("esp8266", WiFi.localIP())) {
     Serial.println("MDNS responder started");
